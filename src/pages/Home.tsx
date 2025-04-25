@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/home/Hero";
 import Features from "@/components/home/Features";
+import HealthQuotes from "@/components/home/HealthQuotes";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <main className="flex-grow">
           <Hero />
           <Features />
+          <HealthQuotes />
         </main>
         <Footer />
       </div>
