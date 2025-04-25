@@ -1,6 +1,5 @@
-
 import { useState } from 'react';
-import { Yoga } from 'lucide-react';
+import { Dumbbell } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { YogaItem } from '@/data/yogaData';
@@ -28,7 +27,7 @@ const YogaCard = ({ item }: YogaCardProps) => {
             <CardDescription className="text-sm">For {item.condition} Conditions</CardDescription>
           </div>
           <div className="bg-medical-light-purple p-2 rounded-full">
-            <Yoga className="h-5 w-5 text-medical-purple" />
+            <Dumbbell className="h-5 w-5 text-medical-purple" />
           </div>
         </div>
       </CardHeader>

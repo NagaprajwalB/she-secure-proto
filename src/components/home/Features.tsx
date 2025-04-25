@@ -1,12 +1,12 @@
 
-import { Yoga, HeartPulse, Hospital, Meditation } from 'lucide-react';
+import { Dumbbell, HeartPulse, Hospital, Brain } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const features = [
   {
     title: "Yoga Therapy",
     description: "Discover yoga poses and sequences tailored to improve specific health conditions.",
-    icon: Yoga,
+    icon: Dumbbell,
     color: "text-medical-purple",
     bgColor: "bg-medical-light-purple",
     link: "/yoga"
@@ -14,7 +14,7 @@ const features = [
   {
     title: "Meditation Practices",
     description: "Guided meditations to help manage stress, anxiety, and improve overall wellbeing.",
-    icon: Meditation,
+    icon: Brain,
     color: "text-green-600",
     bgColor: "bg-medical-green",
     link: "/meditation"

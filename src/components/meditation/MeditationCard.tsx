@@ -1,6 +1,5 @@
-
 import { useState } from 'react';
-import { Meditation } from 'lucide-react';
+import { Brain } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { MeditationItem } from '@/data/meditationData';
@@ -30,7 +29,7 @@ const MeditationCard = ({ item }: MeditationCardProps) => {
             </CardDescription>
           </div>
           <div className="bg-medical-green p-2 rounded-full">
-            <Meditation className="h-5 w-5 text-green-600" />
+            <Brain className="h-5 w-5 text-green-600" />
           </div>
         </div>
       </CardHeader>
