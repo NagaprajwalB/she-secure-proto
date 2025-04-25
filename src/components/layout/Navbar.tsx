@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Heart } from 'lucide-react';
@@ -13,6 +12,7 @@ const Navbar = () => {
     { title: 'Yoga', path: '/yoga' },
     { title: 'Meditation', path: '/meditation' },
     { title: 'Emergency', path: '/emergency' },
+    { title: 'Early Detection', path: '/early-detection' },
   ];
   
   const isActive = (path: string) => {

@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -10,6 +9,7 @@ import Yoga from "./pages/Yoga";
 import Meditation from "./pages/Meditation";
 import Emergency from "./pages/Emergency";
 import NotFound from "./pages/NotFound";
+import EarlyDetection from "./pages/EarlyDetection";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +25,7 @@ const App = () => (
             <Route path="/yoga" element={<Yoga />} />
             <Route path="/meditation" element={<Meditation />} />
             <Route path="/emergency" element={<Emergency />} />
+            <Route path="/early-detection" element={<EarlyDetection />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

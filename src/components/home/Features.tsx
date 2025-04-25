@@ -1,5 +1,5 @@
 
-import { Dumbbell, HeartPulse, Hospital, Brain } from 'lucide-react';
+import { Dumbbell, HeartPulse, Hospital, Brain, Stethoscope } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const features = [
@@ -26,6 +26,14 @@ const features = [
     color: "text-medical-emergency",
     bgColor: "bg-red-100",
     link: "/emergency"
+  },
+  {
+    title: "Early Disease Detection",
+    description: "Advanced screening methods to identify potential health issues early.",
+    icon: Stethoscope,
+    color: "text-blue-600",
+    bgColor: "bg-medical-blue",
+    link: "/early-detection"
   },
   {
     title: "Hospital Locator",
