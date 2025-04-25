@@ -1,7 +1,8 @@
-import { useState } from 'react';
+
 import { Dumbbell } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { YogaItem } from '@/data/yogaData';
 
 interface YogaCardProps {
@@ -9,33 +10,51 @@ interface YogaCardProps {
 }
 
 const YogaCard = ({ item }: YogaCardProps) => {
-  const [expanded, setExpanded] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Card className="overflow-hidden card-hover">
-      <div className="h-48 overflow-hidden">
-        <img 
-          src={item.imageUrl} 
-          alt={item.title} 
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-        />
-      </div>
-      <CardHeader className="pb-2">
-        <div className="flex justify-between items-start">
-          <div>
-            <CardTitle className="text-xl">{item.title}</CardTitle>
-            <CardDescription className="text-sm">For {item.condition} Conditions</CardDescription>
-          </div>
-          <div className="bg-medical-light-purple p-2 rounded-full">
-            <Dumbbell className="h-5 w-5 text-medical-purple" />
-          </div>
+    <>
+      <Card className="overflow-hidden card-hover">
+        <div className="h-48 overflow-hidden">
+          <img 
+            src={item.imageUrl} 
+            alt={item.title} 
+            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+          />
         </div>
-      </CardHeader>
-      <CardContent className="pb-2">
-        <p className="text-gray-700 text-sm">{item.description}</p>
-        
-        {expanded && (
-          <div className="mt-4 space-y-4 animate-fade-in">
+        <CardHeader className="pb-2">
+          <div className="flex justify-between items-start">
+            <div>
+              <CardTitle className="text-xl">{item.title}</CardTitle>
+              <CardDescription className="text-sm">For {item.condition} Conditions</CardDescription>
+            </div>
+            <div className="bg-medical-light-purple p-2 rounded-full">
+              <Dumbbell className="h-5 w-5 text-medical-purple" />
+            </div>
+          </div>
+        </CardHeader>
+        <CardContent className="pb-2">
+          <p className="text-gray-700 text-sm">{item.description}</p>
+        </CardContent>
+        <CardFooter>
+          <Button
+            variant="outline" 
+            size="sm"
+            onClick={() => setIsOpen(true)}
+            className="w-full text-medical-purple border-medical-purple hover:bg-medical-light-purple/50"
+          >
+            Show Details
+          </Button>
+        </CardFooter>
+      </Card>
+
+      <Dialog open={isOpen} onOpenChange={setIsOpen}>
+        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>{item.title}</DialogTitle>
+          </DialogHeader>
+          
+          <div className="space-y-6">
             <div>
               <h4 className="font-medium text-sm mb-2">Recommended Poses:</h4>
               <ul className="space-y-2">
@@ -60,19 +79,9 @@ const YogaCard = ({ item }: YogaCardProps) => {
               </ul>
             </div>
           </div>
-        )}
-      </CardContent>
-      <CardFooter>
-        <Button
-          variant="outline" 
-          size="sm"
-          onClick={() => setExpanded(!expanded)}
-          className="w-full text-medical-purple border-medical-purple hover:bg-medical-light-purple/50"
-        >
-          {expanded ? 'Show Less' : 'Show Details'}
-        </Button>
-      </CardFooter>
-    </Card>
+        </DialogContent>
+      </Dialog>
+    </>
   );
 };
 
