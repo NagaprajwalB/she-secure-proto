@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 
 const YogaList = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [filterCondition, setFilterCondition] = useState('');
+  const [filterCondition, setFilterCondition] = useState('all');
   
   const conditions = Array.from(new Set(yogaData.map(item => item.condition)));
 
@@ -16,7 +16,7 @@ const YogaList = () => {
     return (
       (item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
        item.description.toLowerCase().includes(searchTerm.toLowerCase())) &&
-      (filterCondition === '' || item.condition === filterCondition)
+      (filterCondition === 'all' || item.condition === filterCondition)
     );
   });
 
@@ -40,7 +40,7 @@ const YogaList = () => {
               <SelectValue placeholder="All Conditions" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="">All Conditions</SelectItem>
+              <SelectItem value="all">All Conditions</SelectItem>
               {conditions.map(condition => (
                 <SelectItem key={condition} value={condition}>{condition}</SelectItem>
               ))}
