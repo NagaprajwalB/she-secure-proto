@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { firstAidData, FirstAidItem } from '@/data/emergencyData';
 import FirstAidCard from './FirstAidCard';
