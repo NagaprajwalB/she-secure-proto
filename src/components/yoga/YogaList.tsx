@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { yogaData, YogaItem } from '@/data/yogaData';
 import YogaCard from './YogaCard';
