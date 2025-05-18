@@ -10,6 +10,7 @@ interface MeditationCardProps {
   item: MeditationItem;
 }
 
+
 const MeditationCard = ({ item }: MeditationCardProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
