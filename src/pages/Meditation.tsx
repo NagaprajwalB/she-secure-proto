@@ -4,6 +4,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MeditationList from "@/components/meditation/MeditationList";
 
+
 const Meditation = () => {
   return (
     <>
