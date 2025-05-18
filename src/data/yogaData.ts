@@ -19,7 +19,7 @@ export const yogaData: YogaItem[] = [
     title: "Heart Health Yoga",
     description: "Gentle yoga sequences to improve circulation and heart health",
     condition: "Cardiovascular",
-    imageUrl: "https://images.unsplash.com/photo-1599447421416-e5d7656de3c2?q=80&w=1000&auto=format&fit=crop",
+    imageUrl: "https://i.pinimg.com/736x/36/8c/d1/368cd128a38b486695207a97d1f97cfb.jpg",
     poses: [
       {
         name: "Mountain Pose (Tadasana)",

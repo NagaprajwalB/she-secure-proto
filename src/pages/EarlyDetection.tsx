@@ -1,70 +1,68 @@
-
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import DetectionCard from "@/components/early-detection/DetectionCard";
 
 const detectionServices = [
+ 
   {
-    title: "AI-Powered Health Screening",
-    description: "Advanced machine learning algorithms for early disease detection",
-    image: "photo-1581091226825-a6a2a5aee158",
+    title: "Breast Cancer Detection",
+    description: "Breast cancer detection using advanced techniques.",
+    imagePath: "/images/Bcancer.jpg",
     details: [
-      "Utilizes state-of-the-art AI algorithms to analyze health data",
-      "Early detection of potential health risks through pattern recognition",
-      "Continuous monitoring and real-time health insights"
-    ]
+      "Continuous digital health monitoring",
+      "Real-time health data analysis",
+      "Early warning system for health anomalies"
+    ],
+    link: "/breast-cancer/index.html"
+  },
+   {
+    title: "Diabetes Risk Assessment",
+    description: "AI-powered diabetes risk prediction using machine learning",
+    imagePath: "/images/diabetes.jpg",
+    details: [
+      "Advanced machine learning model for diabetes risk assessment",
+      "Analyzes multiple health parameters including glucose levels, BMI, and more",
+      "Get instant risk prediction results",
+      "Helps in early detection of diabetes risk factors"
+    ],
+    link: "/dia/index.html"
   },
   {
-    title: "Genetic Risk Assessment",
-    description: "DNA analysis to identify potential genetic health risks",
-    image: "photo-1487058792275-0ad4aaf24ca7",
+    title: "Heart Disease Detection",
+    description: "Heart disease detection using advanced techniques.",
+    imagePath: "/images/heart_attack.jpg",
     details: [
       "Comprehensive genetic screening for hereditary conditions",
       "Personalized risk assessment based on family history",
       "Detailed genetic counseling and guidance"
-    ]
+    ],
+    link: "/heart-disease/index.html"
   },
+
+  
   {
-    title: "Preventive Health Monitoring",
-    description: "Regular health monitoring for early warning signs",
-    image: "photo-1485827404703-89b55fcc595e",
-    details: [
-      "Regular vital signs monitoring and analysis",
-      "Early detection of cardiovascular conditions",
-      "Preventive health recommendations and lifestyle guidance"
-    ]
-  },
-  {
-    title: "Advanced Diagnostic Imaging",
-    description: "State-of-the-art imaging for early detection",
-    image: "photo-1518770660439-4636190af475",
-    details: [
-      "High-resolution medical imaging technology",
-      "Early detection of structural abnormalities",
-      "Non-invasive screening methods"
-    ]
-  },
-  {
-    title: "Biomarker Analysis",
-    description: "Molecular-level detection of disease indicators",
-    image: "photo-1531297484001-80022131f5a1",
+    title: "Skin Cancer Detection",
+    description: "Skin cancer detection using advanced techniques.",
+    imagePath: "/images/skin_cancer.jpg",
     details: [
       "Advanced blood and tissue analysis",
       "Early detection of cancer markers",
       "Comprehensive metabolic profiling"
     ]
   },
+
   {
-    title: "Digital Health Monitoring",
-    description: "24/7 digital health tracking and analysis",
-    image: "photo-1605810230434-7631ac76ec81",
+    title: "Lung Cancer Detection",
+    description: "Lung cancer detection using advanced techniques.",
+    imagePath: "/images/lung.jpg",
     details: [
-      "Continuous digital health monitoring",
-      "Real-time health data analysis",
-      "Early warning system for health anomalies"
+      "High-resolution medical imaging technology",
+      "Early detection of structural abnormalities",
+      "Non-invasive screening methods"
     ]
-  }
+  },
+ 
 ];
 
 const EarlyDetection = () => {
@@ -87,8 +85,9 @@ const EarlyDetection = () => {
                   key={index}
                   title={service.title}
                   description={service.description}
-                  image={service.image}
+                  imagePath={service.imagePath}
                   details={service.details}
+                  link={service.link}
                 />
               ))}
             </div>

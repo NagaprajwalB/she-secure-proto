@@ -10,6 +10,9 @@ import Meditation from "./pages/Meditation";
 import Emergency from "./pages/Emergency";
 import NotFound from "./pages/NotFound";
 import EarlyDetection from "./pages/EarlyDetection";
+import VitalBuddy from "./pages/VitalBuddy";
+import Pregnancy from "./pages/Pregnancy";
+import BloodDonor from "./pages/BloodDonor";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +25,9 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/vitalbuddy" element={<VitalBuddy />} />
+            <Route path="/pregnancy" element={<Pregnancy />} />
+            <Route path="/blood-donor" element={<BloodDonor />} />
             <Route path="/yoga" element={<Yoga />} />
             <Route path="/meditation" element={<Meditation />} />
             <Route path="/emergency" element={<Emergency />} />

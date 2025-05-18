@@ -9,30 +9,23 @@ const Navbar = () => {
 
   const menuItems = [
     { title: 'Home', path: '/' },
-    { title: 'VitalBuddy', path: '/' },
-    { title: 'Pregnancy', path: '/pregnancy' },
-    { title: 'Blood Donor', path: '/blood-donor' },
+    { title: 'VitalBuddy', path: '/vitalbuddy' },
     { title: 'Yoga', path: '/yoga' },
     { title: 'Meditation', path: '/meditation' },
     { title: 'Emergency', path: '/emergency' },
     { title: 'Early Detection', path: '/early-detection' },
   ];
 
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md shadow-sm">
       <div className="container-custom py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <Heart className="h-6 w-6 text-medical-purple" />
-            <span className="text-xl font-semibold">VitalVison</span>
+            <span className="text-xl font-semibold">SereneHealth</span>
           </Link>
-
-          {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6">
             {menuItems.map((item) => (
               <Link
@@ -49,8 +42,6 @@ const Navbar = () => {
               Get Started
             </Button>
           </div>
-
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
@@ -59,8 +50,6 @@ const Navbar = () => {
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
-
-        {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden pt-4 pb-3 animate-fade-in">
             <div className="flex flex-col gap-4">
@@ -84,6 +73,13 @@ const Navbar = () => {
             </div>
           </div>
         )}
+      </div>
+      <div className="bg-gray-50 py-8">
+        <div className="container-custom text-center">
+          <p className="text-gray-600 mt-4">
+            Your health needs are just one click away. Empowering you with tools for better health and well-being.
+          </p>
+        </div>
       </div>
     </nav>
   );
