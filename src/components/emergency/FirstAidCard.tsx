@@ -9,6 +9,7 @@ interface FirstAidCardProps {
   item: FirstAidItem;
 }
 
+
 const FirstAidCard = ({ item }: FirstAidCardProps) => {
   const [expanded, setExpanded] = useState(false);
 
