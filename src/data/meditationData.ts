@@ -10,6 +10,7 @@ export interface MeditationItem {
   benefits: string[];
 }
 
+
 export const meditationData: MeditationItem[] = [
   {
     id: "meditation-1",
