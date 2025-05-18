@@ -7,6 +7,7 @@ import HospitalMap from "@/components/emergency/HospitalMap";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { HeartPulse, Hospital } from 'lucide-react';
 
+
 const Emergency = () => {
   return (
     <>
