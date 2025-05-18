@@ -18,26 +18,31 @@ Main Page
 
 ![main-page](https://github.com/user-attachments/assets/f2e01f3b-f8db-4c71-965e-d30a98ccb4fa)
 
+<hr>
 Personalized AI ChatBot
 <hr>
 
 ![Screenshot 2025-05-18 105800](https://github.com/user-attachments/assets/2089b534-029d-4227-aaeb-da855121a2c6)
 
+<hr>
 Pragnancy Care
 <hr>
 
 ![pragnancy-care](https://github.com/user-attachments/assets/2d5702ec-cbec-42ef-a1d2-67090f36cd63)
 
+<hr>
 Meditation
 <hr>
 
 ![meditation](https://github.com/user-attachments/assets/9e45c05a-ad2c-4585-8c64-24d5edf06598)
 
+<hr>
 Blood Donation
 <hr>
 
 ![Blood-donation](https://github.com/user-attachments/assets/1bc2fbd0-f81c-4900-8b1d-5aeea754f31e)
 
+<hr>
 Early Disease detection
 <hr>
 
