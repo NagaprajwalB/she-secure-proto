@@ -9,6 +9,7 @@ export interface FirstAidItem {
   when911: string[];
 }
 
+
 export const firstAidData: FirstAidItem[] = [
   {
     id: "emergency-1",
